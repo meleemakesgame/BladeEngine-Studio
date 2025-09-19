@@ -2,20 +2,26 @@
 
 RGB::RGB()
 {
-
+    R = G = B = 0;
 }
 
-RGB::RGB(unsigned int R, unsigned int G, unsigned int B)
+RGB::RGB(unsigned int pR, unsigned int pG, unsigned int pB)
 {
-
+    R = pR;
+    G = pG;
+    B = pB;
 }
 
 RGBA::RGBA()
 {
-
+    R = G = B = 0;
+    A = 255;
 }
 
-RGBA::RGBA(unsigned int R, unsigned int G, unsigned int B, unsigned int A)
+RGBA::RGBA(unsigned int pR, unsigned int pG, unsigned int pB, unsigned int pA)
 {
-
+    R = pR;
+    G = pG;
+    B = pB;
+    A = pA;
 }
