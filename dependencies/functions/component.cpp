@@ -51,6 +51,7 @@ Component::Component(const char* componentName, std::vector<Attribute> attribute
     }
     else
     {
-        std::cerr << "[ERROR]: Invalid BaseComponentType" << std::endl;
+        std::cerr << "[WARNING]: Invalid BaseComponentType, assigning 'attributeList'" << std::endl;
+        Component::Attributes = attributeList;
     }
 }

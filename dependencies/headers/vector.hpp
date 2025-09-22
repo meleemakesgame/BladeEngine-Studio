@@ -162,14 +162,14 @@ class float4
 class int4
 {
     public:
-        float X = 0;
-        float Y = 0;
-        float Z = 0;
-        float W = 0;
+        int X = 0;
+        int Y = 0;
+        int Z = 0;
+        int W = 0;
 
         // Constructors
         int4(); // Default constructor
-        int4(float X, float Y, float Z, float W); // Parameterized constructor
+        int4(int X, int Y, int Z, int W); // Parameterized constructor
 
         // Operator Overloads
         int4 operator+(const int4& other) const;

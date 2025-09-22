@@ -1,27 +1,58 @@
 #include "../headers/vector.hpp"
 
-Vector2::Vector2(float newX, float newY)
+Vector2::Vector2(float pX, float pY)
 {
-    X = newX;
-    Y = newY;
+    X = pX;
+    Y = pY;
 }
 
-int2::int2(int newX, int newY)
+int2::int2(int pX, int pY)
 {
-    X = newX;
-    Y = newY;
+    X = pX;
+    Y = pY;
 }
 
-Vector3::Vector3(float newX, float newY, float newZ)
+Vector3::Vector3(float pX, float pY, float pZ)
 {
-    X = newX;
-    Y = newY;
-    Z = newZ;
+    X = pX;
+    Y = pY;
+    Z = pZ;
 }
 
-int3::int3(int newX, int newY, int newZ)
+int3::int3(int pX, int pY, int pZ)
 {
-    X = newX;
-    Y = newY;
-    Z = newZ;
+    X = pX;
+    Y = pY;
+    Z = pZ;
+}
+
+float3::float3(float pX, float pY, float pZ)
+{
+    X = pX;
+    Y = pY;
+    Z = pZ;
+}
+
+Vector4::Vector4(float pX, float pY, float pZ, float pW)
+{
+    X = pX;
+    Y = pY;
+    Z = pZ;
+    W = pW;
+}
+
+int4::int4(int pX, int pY, int pZ, int pW)
+{
+    X = pX;
+    Y = pY;
+    Z = pZ;
+    W = pW;
+}
+
+float4::float4(float pX, float pY, float pZ, float pW)
+{
+    X = pX;
+    Y = pY;
+    Z = pZ;
+    W = pW;
 }
