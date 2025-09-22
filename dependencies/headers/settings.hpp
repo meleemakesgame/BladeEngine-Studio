@@ -7,9 +7,25 @@
 // Circles
 float PI = 3.14159;
 float TAU = PI * 2;
+float HALF_PI = PI / 2;
 
-// Miscellaneous
-float GOLDEN_RATIO = 1.61803;
+// Golden Ratio
+float PHI = 1.61803;
+
+// Errors
+enum class ErrorCode : int {
+    GLFWError = -3,
+    OpenGLError = -2,
+    WindowError = -1,
+    Success = 0,
+    FileNotFound = 1,
+    PermissionDenied = 2
+};
+
+int getErrorFromErrorCode(ErrorCode error)
+{
+    return static_cast<int>(error);
+}
 
 // Window Settings
 GLFWmonitor* primaryMonitor = glfwGetPrimaryMonitor();
