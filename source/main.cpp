@@ -8,7 +8,7 @@ int main()
     if (!glfwInit())
     {
         std :: cerr << "[ERROR]: GLFW Initialization Failure";
-        return getErrorFromErrorCode(ErrorCode::GLFWError);
+        return getError(ErrorCode::GLFWError);
     }
 
     std :: cout << "[DEBUG]: Initializing GLFW Window and Window Context" << std :: endl;
@@ -19,7 +19,7 @@ int main()
     {
         std :: cerr << "[ERROR]: Window Creation Failed" << std :: endl;
         glfwTerminate();
-        return getErrorFromErrorCode(ErrorCode::WindowError);
+        return getError(ErrorCode::WindowError);
     }
 
     std :: cout << "[DEBUG]: Setting Window Attributes" << std :: endl;
@@ -38,5 +38,5 @@ int main()
     glfwDestroyWindow(window);
     glfwTerminate();
     std :: cout << "[DEBUG]: Terminating GLFW, closing application";
-    return getErrorFromErrorCode(ErrorCode::Success);
+    return getError(ErrorCode::Success);
 }

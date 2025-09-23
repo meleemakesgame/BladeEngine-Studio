@@ -22,7 +22,7 @@ enum class ErrorCode : int {
     PermissionDenied = 2
 };
 
-int getErrorFromErrorCode(ErrorCode error)
+int getError(ErrorCode error)
 {
     return static_cast<int>(error);
 }
