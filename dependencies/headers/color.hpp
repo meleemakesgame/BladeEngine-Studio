@@ -1,17 +1,18 @@
 #pragma once
 
+#include <cstdint>
 #include "../headers/vector.hpp"
 
 class RGB
 {
     public:
-        unsigned int R = 0;
-        unsigned int G = 0;
-        unsigned int B = 0;
+        uint8_t R = 0;
+        uint8_t G = 0;
+        uint8_t B = 0;
 
         // Constructors
         RGB(); // Default constructor
-        RGB(unsigned int R, unsigned int G, unsigned int B); // Parameterized constructor
+        RGB(uint8_t R, uint8_t G, uint8_t B); // Parameterized constructor
 
         // Operator Overloads
         RGB operator+(const RGB& other) const;
@@ -26,14 +27,14 @@ class RGB
 class RGBA
 {
     public:
-        unsigned int R = 0;
-        unsigned int G = 0;
-        unsigned int B = 0;
-        unsigned int A = 0;
+        uint8_t R = 0;
+        uint8_t G = 0;
+        uint8_t B = 0;
+        uint8_t A = 0;
 
         // Constructors
         RGBA(); // Default constructor
-        RGBA(unsigned int R, unsigned int G, unsigned int B, unsigned int A); // Parameterized constructor
+        RGBA(uint8_t R, uint8_t G, uint8_t B, uint8_t A); // Parameterized constructor
 
         // Operator Overloads
         RGBA operator+(const RGBA& other) const;

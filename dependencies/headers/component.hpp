@@ -6,12 +6,13 @@
 #include "../headers/attribute.hpp"
 #include "../headers/shader.hpp"
 #include "../headers/mesh.hpp"
+#include "../headers/material.hpp"
 
 enum BaseComponentType {
     None,
     MeshRenderer,
     MeshCollider,
-    Texture
+    Material
 };
 
 class Component

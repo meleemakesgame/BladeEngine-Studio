@@ -28,6 +28,7 @@ Component::Component(const char* componentName, std::vector<Attribute> attribute
             meshRendererBaseAttributes.push_back(enabled);
             meshRendererBaseAttributes.push_back(mesh);
         }
+
         else if (Component::componentType == MeshCollider)
         {
             std::vector<Attribute> meshColliderBaseAttributes;
@@ -44,11 +45,26 @@ Component::Component(const char* componentName, std::vector<Attribute> attribute
             meshColliderBaseAttributes.push_back(enabled);
             meshColliderBaseAttributes.push_back(mesh);
         }
+
+        else if (Component::componentType == Material)
+        {
+            std::vector<Attribute> materialBaseAttributes;
+            
+            Attribute materialAttribute;
+            Material material;
+            Image texture;
+            Image normal;
+            
+
+            materialBaseAttributes.push_back(materialAttribute);
+        }
     }
+
     else if (Component::componentType == None or Component::componentType == NULL)
     {
         Component::Attributes = attributeList;
     }
+
     else
     {
         std::cerr << "[WARNING]: Invalid BaseComponentType, assigning 'attributeList'" << std::endl;
