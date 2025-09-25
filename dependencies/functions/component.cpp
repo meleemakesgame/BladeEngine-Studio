@@ -46,17 +46,21 @@ Component::Component(const char* componentName, std::vector<Attribute> attribute
             meshColliderBaseAttributes.push_back(mesh);
         }
 
-        else if (Component::componentType == Material)
+        else if (Component::componentType == SurfaceAppearance)
         {
-            std::vector<Attribute> materialBaseAttributes;
-            
-            Attribute materialAttribute;
+            std::vector<Attribute> surfaceAppearanceBaseAttributes;
+
             Material material;
             Image texture;
             Image normal;
-            
+            material.texture = texture;
+            material.normalMap = normal;
 
-            materialBaseAttributes.push_back(materialAttribute);
+            Attribute surfaceAppearanceAttribute;
+            surfaceAppearanceAttribute.Name = "SurfaceAppearance";
+            surfaceAppearanceAttribute.Value = material;
+
+            surfaceAppearanceBaseAttributes.push_back(surfaceAppearanceAttribute);
         }
     }
 

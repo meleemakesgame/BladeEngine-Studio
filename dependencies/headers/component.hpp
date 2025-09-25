@@ -12,7 +12,7 @@ enum BaseComponentType {
     None,
     MeshRenderer,
     MeshCollider,
-    Material
+    SurfaceAppearance
 };
 
 class Component
