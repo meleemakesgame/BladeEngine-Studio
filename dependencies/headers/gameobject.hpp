@@ -1,7 +1,6 @@
 #pragma once
 
 #include "../headers/vector.hpp"
-#include "../headers/shader.hpp"
 #include "../headers/component.hpp"
 
 class GameObject
@@ -14,6 +13,6 @@ class GameObject
         // Components
         std::vector<Component> Components;
 
-        GameObject();
-        GameObject(Vector3 newPosition, Vector3 newRotation, Vector3 Scalar, std::vector<Component> componentList);
+        GameObject() = delete;
+        GameObject(Vector3 newPosition, Vector3 newRotation, Vector3 Scalar, std::vector<Component> componentList) = delete;
 };
