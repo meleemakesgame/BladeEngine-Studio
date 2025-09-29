@@ -14,6 +14,7 @@ float PHI = 1.61803;
 
 // Errors
 enum class ErrorCode : int {
+    GLADError = -4,
     GLFWError = -3,
     OpenGLError = -2,
     WindowError = -1,

@@ -1,19 +1,6 @@
 #pragma once
 
-#include "../headers/gameobject.hpp"
-#include "../headers/color.hpp"
-
-class Vertex
-{
-    public:
-        Vector3 Position;
-        Vector3 Normal;
-        RGB Color;
-        Vector2 TextureCoordinate;
-
-        Vertex();
-        Vertex(Vector3 newPosition, Vector3 newNormal, RGB newColor, Vector2 textureCoordinate);
-};
+#include "../headers/mesh.hpp"
 
 class Plane : GameObject
 {

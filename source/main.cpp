@@ -23,6 +23,13 @@ int main()
         return getError(ErrorCode::WindowError);
     }
 
+    std :: cout << "[DEBUG]: Initializing GLAD" << std :: endl;
+    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+    {
+        std::cout << "[ERROR]: Failed to Initialize GLAD" << std::endl;
+        return getError(ErrorCode::GLADError);
+    }
+
     std :: cout << "[DEBUG]: Setting Window Attributes" << std :: endl;
     glfwSetWindowSizeLimits(window, MINIMUM_WINDOW_WIDTH, MINIMUM_WINDOW_HEIGHT, GLFW_DONT_CARE, GLFW_DONT_CARE);
     glfwMakeContextCurrent(window);

@@ -13,7 +13,12 @@ class Shader
     public:
         GLuint ID;
 
+        const char* vertexShaderPath;
+        const char* fragmentShaderPath;
+
         Shader(const char* vertexShaderPath, const char* fragmentShaderPath);
+
+        void compile();
 
         void use();
 
