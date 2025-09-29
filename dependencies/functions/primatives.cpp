@@ -1,20 +1,5 @@
 #include "../headers/primatives.hpp"
 
-Vertex::Vertex()
-{
-    Position = Normal = Vector3();
-    Color = RGB();
-    TextureCoordinate = Vector2();
-}
-
-Vertex::Vertex(Vector3 newPosition, Vector3 newNormal, RGB newColor, Vector2 textureCoordinate)
-{
-    Position = newNormal;
-    Normal = newNormal;
-    Color = newColor;
-    TextureCoordinate = textureCoordinate;
-}
-
 Plane::Plane(Vector3 newPosition, Vector3 newRotation, Vector3 Scalar)
 {
     Position = newPosition;
@@ -27,8 +12,8 @@ Plane::Plane(Vector3 newPosition, Vector3 newRotation, Vector3 Scalar)
     Attribute enabled;
     enabled.Name = "Enabled";
     enabled.Value = true;
-    Mesh planeMesh;
-    planeMesh.VertexArray = VertexArray;
+    Shader planeShader("../../shaders/basic.vert", "../../shaders/basic.frag");
+    Mesh planeMesh(VertexArray, IndexArray, planeShader);
     Attribute mesh;
     mesh.Name = "Mesh";
     mesh.Value = planeMesh;

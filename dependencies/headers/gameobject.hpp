@@ -13,6 +13,6 @@ class GameObject
         // Components
         std::vector<Component> Components;
 
-        GameObject() = delete;
-        GameObject(Vector3 newPosition, Vector3 newRotation, Vector3 Scalar, std::vector<Component> componentList) = delete;
+        GameObject();
+        GameObject(Vector3 newPosition, Vector3 newRotation, Vector3 Scalar, std::vector<Component> componentList);
 };

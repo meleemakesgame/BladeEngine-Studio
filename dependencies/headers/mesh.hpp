@@ -22,6 +22,9 @@ class Mesh
         std::vector<Vertex> VertexArray;        // Individual vertices (Vertex(Vector3 Position, Vector3 Normal, RGB VertexColor))
         std::vector<unsigned int> IndexArray;   // Vertex IDs
         Shader shader;
+
+        Mesh();
+        Mesh(std::vector<Vertex> pVertexArray, std::vector<unsigned int> pIndexArray, Shader pShader);
     private:
         GLuint VAO, VBO, EBO;
 

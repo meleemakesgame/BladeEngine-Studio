@@ -1,6 +1,7 @@
 #include <iostream>
 #include "../dependencies/headers/settings.hpp"
 #include "../dependencies/headers/file_manager.hpp"
+#include "../dependencies/headers/primatives.hpp"
 
 int main()
 {
@@ -34,6 +35,9 @@ int main()
     glfwSetWindowSizeLimits(window, MINIMUM_WINDOW_WIDTH, MINIMUM_WINDOW_HEIGHT, GLFW_DONT_CARE, GLFW_DONT_CARE);
     glfwMakeContextCurrent(window);
 
+    // Initialize Objects
+    Plane(Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(1, 1, 1));
+
     std :: cout << "[DEBUG]: Starting Window Game Loop" << std :: endl;
     while (!glfwWindowShouldClose(window))
     {
@@ -42,6 +46,9 @@ int main()
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
+    
+    // Destroy all objects
+    
 
     glfwDestroyWindow(window);
     glfwTerminate();

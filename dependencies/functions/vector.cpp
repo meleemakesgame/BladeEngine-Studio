@@ -12,6 +12,13 @@ int2::int2(int pX, int pY)
     Y = pY;
 }
 
+Vector3::Vector3()
+{
+    X = 0;
+    Y = 0;
+    Z = 0;
+}
+
 Vector3::Vector3(float pX, float pY, float pZ)
 {
     X = pX;
