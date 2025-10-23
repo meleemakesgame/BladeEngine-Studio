@@ -1,46 +1,45 @@
 #include <iostream>
 #include "../dependencies/headers/settings.hpp"
+#include "../dependencies/headers/debug.hpp"
 #include "../dependencies/headers/file_manager.hpp"
-#include "../dependencies/headers/primatives.hpp"
 
 int main()
 {
-    std :: cout << "[DEBUG]: Initializing GLFW" << std :: endl;
+    print("Initializing GLFW");
 
     if (!glfwInit())
     {
-        std :: cerr << "[ERROR]: GLFW Initialization Failure";
+        error("GLFW Initialization Failure", ErrorCode::GLFWError);
         return getError(ErrorCode::GLFWError);
     }
 
-    std :: cout << "[DEBUG]: Initializing GLFW Window and Window Context" << std :: endl;
+    print("Initializing GLFW Window and Window Context");
     glfwWindowHint(GL_MAJOR_VERSION, 3);
     glfwWindowHint(GL_MINOR_VERSION, 3);
     GLFWwindow* window = glfwCreateWindow(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT, WINDOW_NAME, NULL, NULL);
     if (!window || window == NULL)
     {
-        std :: cerr << "[ERROR]: Window Creation Failed" << std :: endl;
+        error("[ERROR]: Window Creation Failed", ErrorCode::WindowError);
         glfwTerminate();
         return getError(ErrorCode::WindowError);
     }
 
-    std :: cout << "[DEBUG]: Setting Window Attributes" << std :: endl;
+    print("Setting Window Attributes");
     glfwSetWindowSizeLimits(window, MINIMUM_WINDOW_WIDTH, MINIMUM_WINDOW_HEIGHT, GLFW_DONT_CARE, GLFW_DONT_CARE);
     glfwMakeContextCurrent(window);
 
-    std :: cout << "[DEBUG]: Loading GLAD OpenGL Library" << std :: endl;
+    print("Loading GLAD OpenGL Library");
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
-        std::cout << "[ERROR]: Failed to Load GLAD OpenGL Library" << std::endl;
+        error("Failed to Load GLAD OpenGL Library", ErrorCode::GLADError);
         glfwTerminate();
         return getError(ErrorCode::GLADError);
     }
 
-    std :: cout << "[DEBUG]: Starting Window Game Loop" << std :: endl;
+    print("Starting Window Game Loop");
     while (!glfwWindowShouldClose(window))
     {
         // Initialize Objects
-        Plane plane(Vector3(), Vector3(), Vector3(1, 1, 1));
 
         glfwSwapBuffers(window);
         glfwPollEvents();
@@ -51,6 +50,6 @@ int main()
 
     glfwDestroyWindow(window);
     glfwTerminate();
-    std :: cout << "[DEBUG]: Terminating GLFW, closing application";
+    print("Terminating GLFW, closing application");
     return getError(ErrorCode::Success);
 }

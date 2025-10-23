@@ -12,22 +12,6 @@ float HALF_PI = PI / 2;
 // Golden Ratio
 float PHI = 1.61803;
 
-// Errors
-enum class ErrorCode : int {
-    GLADError = -4,
-    GLFWError = -3,
-    OpenGLError = -2,
-    WindowError = -1,
-    Success = 0,
-    FileNotFound = 1,
-    PermissionDenied = 2
-};
-
-int getError(ErrorCode error)
-{
-    return static_cast<int>(error);
-}
-
 // Window Settings
 GLFWmonitor* primaryMonitor = glfwGetPrimaryMonitor();
 const GLFWvidmode* monitorVideoMode = glfwGetVideoMode(primaryMonitor);
