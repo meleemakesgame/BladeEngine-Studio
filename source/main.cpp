@@ -19,7 +19,7 @@ int main()
     GLFWwindow* window = glfwCreateWindow(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT, WINDOW_NAME, NULL, NULL);
     if (!window || window == NULL)
     {
-        error("[ERROR]: Window Creation Failed", ErrorCode::WindowError);
+        error("Window Creation Failed", ErrorCode::WindowError);
         glfwTerminate();
         return getError(ErrorCode::WindowError);
     }
@@ -46,7 +46,6 @@ int main()
     }
     
     // Destroy all objects
-    
 
     glfwDestroyWindow(window);
     glfwTerminate();

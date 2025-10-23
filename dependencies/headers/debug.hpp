@@ -40,7 +40,7 @@ const char* errorCodeToString(ErrorCode errorCode)
         case ErrorCode::Success: return "Success";
         case ErrorCode::FileNotFound: return "File Not Found";
         case ErrorCode::PermissionDenied: return "Permission Denied";
-        default: return "Unknown";
+        default: return "Success";
     }
 }
 
