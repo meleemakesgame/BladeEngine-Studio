@@ -9,11 +9,11 @@ int main()
 
     if (!glfwInit())
     {
-        error("GLFW Initialization Failure", ErrorCode::GLFWError);
+        error("Failed to load GLFW", ErrorCode::GLFWError);
         return getError(ErrorCode::GLFWError);
     }
 
-    print("Initializing GLFW Window and Window Context");
+    print("Initializing Window and Window Context");
     glfwWindowHint(GL_MAJOR_VERSION, 3);
     glfwWindowHint(GL_MINOR_VERSION, 3);
     GLFWwindow* window = glfwCreateWindow(DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT, WINDOW_NAME, NULL, NULL);
