@@ -3,6 +3,9 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include "../headers/vector.hpp"
+#include "../headers/color.hpp"
+
 // Mathematical Constants
 // Circles
 float PI = 3.14159;

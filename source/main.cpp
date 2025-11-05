@@ -31,7 +31,7 @@ int main()
     print("Loading GLAD OpenGL Library");
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
-        error("Failed to Load GLAD OpenGL Library", ErrorCode::GLADError);
+        error("Failed to load GLAD OpenGL Library", ErrorCode::GLADError);
         glfwTerminate();
         return getError(ErrorCode::GLADError);
     }
@@ -39,13 +39,15 @@ int main()
     print("Starting Window Game Loop");
     while (!glfwWindowShouldClose(window))
     {
-        // Initialize Objects
+        // Basic Rendering stuff
+        glClearColor(0.5, 0.5, 0.55, 0.67);
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        // Initialize UI
 
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
-    
-    // Destroy all objects
 
     glfwDestroyWindow(window);
     glfwTerminate();

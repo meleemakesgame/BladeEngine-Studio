@@ -3,11 +3,14 @@
 #include <iostream>
 
 // Debugging
+
+// Outputs input 'message' string to console
 void print(const char* message)
 {
     std :: cout << "[BLADE_ENGINE::DEBUG]: " << message << std::endl;
 }
 
+// Outputs input 'message' string to console as a [BLADE_ENGINE::WARNING]
 void warn(const char* message)
 {
     std :: cout << "[BLADE_ENGINE::WARNING]: " << message << std::endl;
@@ -44,7 +47,7 @@ const char* errorCodeToString(ErrorCode errorCode)
     }
 }
 
-
+// Outputs input 'message' string to console as a [BLADE_ENGINE::ERROR]
 void error(const char* message, ErrorCode errorCode)
 {
     std :: cout << "[BLADE_ENGINE::ERROR::" << errorCodeToString(errorCode) <<"]: " << message << std::endl;
